@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/tvItemId"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="ID"
+        app:layout_constraintEnd_toStartOf="@+id/tvItemName"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/tvItemFechaNacimiento"
+        app:layout_constraintEnd_toStartOf="@+id/tvItemNumeroLlamadas"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvItemId"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemNumeroLlamadas"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:drawableTop="@android:drawable/stat_sys_phone_call_forward"
+        android:gravity="center"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvItemName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvItemFechaNacimiento"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemNumeroLlamadas"
+        app:layout_constraintEnd_toStartOf="@+id/tvItemNumeroLlamadas"
+        app:layout_constraintStart_toEndOf="@+id/tvItemTelefono"
+        app:layout_constraintTop_toTopOf="@+id/tvItemTelefono" />
+
+    <TextView
+        android:id="@+id/tvItemTelefono"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvItemId"
+        app:layout_constraintEnd_toStartOf="@+id/tvItemFechaNacimiento"
+        app:layout_constraintStart_toStartOf="@+id/tvItemName"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
