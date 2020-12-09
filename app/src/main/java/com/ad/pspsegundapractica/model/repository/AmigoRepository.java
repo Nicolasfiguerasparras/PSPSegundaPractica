@@ -1,14 +1,14 @@
-package com.ad.pspsegundapractica.model;
+package com.ad.pspsegundapractica.model.repository;
 
 import android.content.Context;
 
 
 import androidx.lifecycle.LiveData;
 
-import com.ad.pspsegundapractica.ThreadApplication;
-import com.ad.pspsegundapractica.model.dao.AmigoDao;
-import com.ad.pspsegundapractica.model.room.AmigoDatabase;
-import com.ad.pspsegundapractica.model.entity.AmigoPOJO;
+import com.ad.pspsegundapractica.model.application.ThreadApplication;
+import com.ad.pspsegundapractica.model.room.dao.AmigoDao;
+import com.ad.pspsegundapractica.model.room.database.AmigoDatabase;
+import com.ad.pspsegundapractica.model.room.entity.AmigoPOJO;
 
 import java.util.List;
 
@@ -25,7 +25,7 @@ public class AmigoRepository {
         Context appContext = context.getApplicationContext();
         amigoDatabase = AmigoDatabase.getAmigoDatabase(context);
         amigoDao = amigoDatabase.getAmigoDao();
-        amigoLiveList = amigoDao.getAmigos();
+        amigoLiveList = amigoDao.getAmigosLive();
     }
 
     public static AmigoRepository get(Context context) {

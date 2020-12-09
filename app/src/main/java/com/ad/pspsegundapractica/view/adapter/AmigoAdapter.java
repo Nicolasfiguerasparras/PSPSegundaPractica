@@ -10,9 +10,8 @@ import androidx.recyclerview.widget.AsyncDifferConfig;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
-import com.ad.pspsegundapractica.model.entity.AmigoPOJO;
+import com.ad.pspsegundapractica.model.room.entity.AmigoPOJO;
 import com.ad.pspsegundapractica.view.EditAmigoActivity;
-import com.ad.pspsegundapractica.view.MainActivity;
 
 public class AmigoAdapter  extends ListAdapter<AmigoPOJO, AmigoHolder> {
 

@@ -1,13 +1,13 @@
-package com.ad.pspsegundapractica.model;
+package com.ad.pspsegundapractica.model.repository;
 
 import android.content.Context;
 
 import androidx.lifecycle.LiveData;
 
-import com.ad.pspsegundapractica.ThreadApplication;
-import com.ad.pspsegundapractica.model.dao.LlamadaDao;
-import com.ad.pspsegundapractica.model.room.LlamadaDatabase;
-import com.ad.pspsegundapractica.model.entity.LlamadaPOJO;
+import com.ad.pspsegundapractica.model.application.ThreadApplication;
+import com.ad.pspsegundapractica.model.room.dao.LlamadaDao;
+import com.ad.pspsegundapractica.model.room.database.AmigoDatabase;
+import com.ad.pspsegundapractica.model.room.entity.LlamadaPOJO;
 
 import java.util.List;
 
@@ -17,13 +17,13 @@ public class LlamadaRepository {
 
     private LlamadaDao llamadaDao;
     private LiveData<List<LlamadaPOJO>> llamadaLiveList;
-    private LlamadaDatabase llamadaDatabase;
+    private AmigoDatabase amigoDatabase;
 
     public LlamadaRepository(Context context){
         Context appContext = context.getApplicationContext();
-        llamadaDatabase = LlamadaDatabase.getLlamadaDatabase(context);
-        llamadaDao = llamadaDatabase.getLlamadaDao();
-        llamadaLiveList = llamadaDao.getLlamadas();
+        amigoDatabase = AmigoDatabase.getAmigoDatabase(context);
+        llamadaDao = amigoDatabase.getLlamadaDao();
+        llamadaLiveList = llamadaDao.getLlamadasLive();
     }
 
     public static LlamadaRepository get(Context context) {

@@ -1,4 +1,4 @@
-package com.ad.pspsegundapractica;
+package com.ad.pspsegundapractica.model.application;
 
 import com.ad.pspsegundapractica.view.MainActivity;
 

@@ -1,16 +1,12 @@
 package com.ad.pspsegundapractica.view.adapter;
 
-import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import com.ad.pspsegundapractica.R;
-import com.ad.pspsegundapractica.view.EditAmigoActivity;
 
 import androidx.recyclerview.widget.RecyclerView;
 

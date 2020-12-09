@@ -10,7 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.ad.pspsegundapractica.R;
-import com.ad.pspsegundapractica.model.entity.AmigoPOJO;
+import com.ad.pspsegundapractica.model.room.entity.AmigoPOJO;
 import com.ad.pspsegundapractica.view.adapter.AmigoAdapter;
 import com.ad.pspsegundapractica.viewmodel.AmigoViewModel;
 

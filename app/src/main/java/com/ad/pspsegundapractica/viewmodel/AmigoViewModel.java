@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.ad.pspsegundapractica.model.AmigoRepository;
-import com.ad.pspsegundapractica.model.entity.AmigoPOJO;
+import com.ad.pspsegundapractica.model.repository.AmigoRepository;
+import com.ad.pspsegundapractica.model.room.entity.AmigoPOJO;
 
 import java.util.List;
 

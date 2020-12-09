@@ -1,14 +1,15 @@
-package com.ad.pspsegundapractica.model.entity;
+package com.ad.pspsegundapractica.model.room.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = "amigo")
+@Entity(tableName = "amigo", indices = {@Index(value = {"telefono"}, unique = true)})
 public class AmigoPOJO implements Serializable {
 
     @PrimaryKey(autoGenerate = true)
@@ -18,6 +19,7 @@ public class AmigoPOJO implements Serializable {
     @ColumnInfo(name = "nombre")
     private String nombre;
 
+    @NonNull
     @ColumnInfo(name = "fechaNacimiento")
     private String fechaNacimiento;
 
@@ -53,6 +55,7 @@ public class AmigoPOJO implements Serializable {
         this.nombre = nombre;
     }
 
+    @NonNull
     public String getFechaNacimiento() {
         return fechaNacimiento;
     }
