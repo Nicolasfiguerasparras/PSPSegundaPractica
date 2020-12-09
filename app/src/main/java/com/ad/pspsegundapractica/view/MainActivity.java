@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         amigoPOJO = new AmigoPOJO();
         amigoPOJO.setNombre("Nicolás");
         amigoPOJO.setFechaNacimiento("22/03/1999");
-        amigoPOJO.setTelefono(639941992);
+        amigoPOJO.setTelefono(123456789);
         amigoViewModel.insert(amigoPOJO);
     }
 }
