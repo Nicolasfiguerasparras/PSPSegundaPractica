@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="8dp">
 
     <TextView
@@ -12,13 +12,13 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:text="ID"
-        app:layout_constraintEnd_toStartOf="@+id/tvItemName"
+        app:layout_constraintEnd_toStartOf="@+id/tvItemNombre"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvItemName"
+        android:id="@+id/tvItemNombre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -31,13 +31,13 @@
 
     <TextView
         android:id="@+id/tvItemNumeroLlamadas"
-        android:layout_width="100dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:drawableTop="@android:drawable/stat_sys_phone_call_forward"
         android:gravity="center"
         android:text="0"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvItemName"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -59,6 +59,15 @@
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="@+id/tvItemId"
         app:layout_constraintEnd_toStartOf="@+id/tvItemFechaNacimiento"
-        app:layout_constraintStart_toStartOf="@+id/tvItemName"
-        app:layout_constraintTop_toBottomOf="@+id/tvItemName" />
+        app:layout_constraintStart_toStartOf="@+id/tvItemNombre"
+        app:layout_constraintTop_toBottomOf="@+id/tvItemNombre" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="300dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

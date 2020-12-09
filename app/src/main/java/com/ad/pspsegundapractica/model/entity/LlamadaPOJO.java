@@ -3,6 +3,7 @@ package com.ad.pspsegundapractica.model.entity;
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
@@ -21,6 +22,7 @@ public class LlamadaPOJO implements Serializable {
     @ColumnInfo(name = "fechaLlamada")
     private String fechaLlamada;
 
+    @Ignore
     public LlamadaPOJO() {
     }
 

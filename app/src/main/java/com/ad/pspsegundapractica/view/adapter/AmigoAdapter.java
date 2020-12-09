@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.AsyncDifferConfig;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
-import com.ad.pspsegundapractica.model.entity.EditAmigoActivity;
 import com.ad.pspsegundapractica.model.entity.AmigoPOJO;
+import com.ad.pspsegundapractica.view.EditAmigoActivity;
+import com.ad.pspsegundapractica.view.MainActivity;
 
 public class AmigoAdapter  extends ListAdapter<AmigoPOJO, AmigoHolder> {
 
@@ -35,7 +36,7 @@ public class AmigoAdapter  extends ListAdapter<AmigoPOJO, AmigoHolder> {
     @Override
     public void onBindViewHolder(@NonNull AmigoHolder holder, int position) {
         AmigoPOJO posItem = getItem(position);
-        holder.onBindViewHolder(posItem.getId() ,posItem.getNombre(), posItem.getTelefono(), posItem.getFechaNacimiento());
+        holder.onBindViewHolder(posItem.getId(), posItem.getNombre(), posItem.getTelefono(), posItem.getFechaNacimiento(), 0);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
