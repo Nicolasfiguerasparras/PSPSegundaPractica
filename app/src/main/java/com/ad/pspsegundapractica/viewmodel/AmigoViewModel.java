@@ -15,6 +15,7 @@ public class AmigoViewModel extends AndroidViewModel {
 
     private AmigoRepository repository;
     private LiveData<List<AmigoPOJO>> liveAmigo;
+    private List<AmigoPOJO> amigoPOJOList;
 
     public AmigoViewModel(@NonNull Application application) {
         super(application);
@@ -22,8 +23,16 @@ public class AmigoViewModel extends AndroidViewModel {
         liveAmigo = repository.getAmigos();
     }
 
-    public LiveData<List<AmigoPOJO>> getAllAmigo(){
+    public LiveData<List<AmigoPOJO>> getAllAmigoLive(){
         return liveAmigo;
+    }
+
+    public List<AmigoPOJO> getAllAmigo(){
+        return amigoPOJOList;
+    }
+
+    public void setAmigoPOJOList(AmigoPOJO amigoPOJO){
+        amigoPOJOList.add(amigoPOJO);
     }
 
     public void insert(AmigoPOJO amigoPOJO){

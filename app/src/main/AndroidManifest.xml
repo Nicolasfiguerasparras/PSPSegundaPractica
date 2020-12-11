@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PSPSegundaPractica">
-        <activity android:name=".view.ImportAmigoActivity"></activity>
+        <activity android:name=".view.InfoContactoActivity"></activity>
+        <activity android:name=".view.ImportAmigoActivity" />
         <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

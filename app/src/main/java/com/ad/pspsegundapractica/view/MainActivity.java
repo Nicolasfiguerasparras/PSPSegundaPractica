@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.ad.pspsegundapractica.R;
 import com.ad.pspsegundapractica.model.room.entity.AmigoPOJO;
@@ -22,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     private Intent intent;
     private AmigoPOJO amigoPOJO;
     final AmigoAdapter adapter = new AmigoAdapter(MainActivity.this, new AmigoAdapter.AmigoDiff());
+    Button btnImportContacts;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +42,14 @@ public class MainActivity extends AppCompatActivity {
         rv.setAdapter(adapter);
         rv.setLayoutManager(new LinearLayoutManager(this));
 
-        amigoViewModel.getAllAmigo().observe(this, new Observer<List<AmigoPOJO>>() {
+        amigoViewModel.getAllAmigoLive().observe(this, new Observer<List<AmigoPOJO>>() {
             @Override
             public void onChanged(List<AmigoPOJO> amigoPOJOS) {
                 adapter.submitList(amigoPOJOS);
             }
         });
+
+        btnImportContacts = findViewById(R.id.btnImportContactos);
 
         initData();
     }
@@ -54,5 +60,13 @@ public class MainActivity extends AppCompatActivity {
         amigoPOJO.setFechaNacimiento("22/03/1999");
         amigoPOJO.setTelefono(123456789);
         amigoViewModel.insert(amigoPOJO);
+
+        btnImportContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ImportAmigoActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
