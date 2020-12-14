@@ -56,11 +56,20 @@ public class ImportAmigoActivity extends AppCompatActivity {
                                             order);
         while(cursor.moveToNext()){
             String nombre = cursor.getString(0);
-            int telefono = Integer.parseInt(cursor.getString(1));
+            String telefono = cursor.getString(1);
             String fecha = "Empty";
 
-            amigoPOJO = new AmigoPOJO(nombre, fecha, telefono);
-            amigoViewModel.setAmigoPOJOList(amigoPOJO);
+            telefono = telefono.replaceAll("[^0-9]","");
+
+            System.out.println(telefono);
+            System.out.println(nombre);
+            System.out.println(fecha);
+
+            amigoPOJO = new AmigoPOJO();
+            amigoPOJO.setNombre(nombre);
+            amigoPOJO.setTelefono(Integer.parseInt(telefono));
+            amigoPOJO.setFechaNacimiento(fecha);
+            amigoViewModel.insert(amigoPOJO);
         }
         cursor.close();
     }

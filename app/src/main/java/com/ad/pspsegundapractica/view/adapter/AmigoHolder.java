@@ -10,8 +10,6 @@ import com.ad.pspsegundapractica.R;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-
-
 public class AmigoHolder extends RecyclerView.ViewHolder {
 
     private TextView tvItemId, tvItemNombre, tvItemTelefono, tvItemFechaNacimiento, tvItemNumeroLlamadas;

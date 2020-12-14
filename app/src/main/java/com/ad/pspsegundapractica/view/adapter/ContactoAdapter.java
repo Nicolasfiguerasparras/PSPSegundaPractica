@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ad.pspsegundapractica.R;
 import com.ad.pspsegundapractica.model.room.entity.AmigoPOJO;
 import com.ad.pspsegundapractica.view.MainActivity;
-import com.ad.pspsegundapractica.viewmodel.AmigoViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +22,7 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.ViewHo
     private Context contexto;
     private List<AmigoPOJO> listAmigoPojo;
     private Intent intent;
-    public static final String A = "a";
+    public static final String INTENT = "I";
 
     public ContactoAdapter(Context contexto, List<AmigoPOJO> listAmigoPojo) {
         this.contexto = contexto;
@@ -50,7 +49,7 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.ViewHo
             @Override
             public void onClick(View v) {
                 intent = new Intent(contexto, MainActivity.class);
-                intent.putExtra(A, arrayList);
+                intent.putExtra(INTENT, arrayList);
                 contexto.startActivity(intent);
             }
         });
