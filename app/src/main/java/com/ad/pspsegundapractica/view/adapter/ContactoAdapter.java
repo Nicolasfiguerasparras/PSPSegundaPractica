@@ -57,7 +57,11 @@ public class ContactoAdapter extends RecyclerView.Adapter<ContactoAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return listAmigoPojo.size();
+        if (listAmigoPojo != null){
+            return listAmigoPojo.size();
+        } else {
+            return 0;
+        }
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

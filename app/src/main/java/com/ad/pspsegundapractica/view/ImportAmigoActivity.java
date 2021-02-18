@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -29,6 +30,8 @@ public class ImportAmigoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_import_amigo);
 
         init();
+        Intent intent = new Intent(ImportAmigoActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
     private void init() {

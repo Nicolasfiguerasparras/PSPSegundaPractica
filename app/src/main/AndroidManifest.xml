@@ -13,7 +13,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PSPSegundaPractica">
-        <activity android:name=".view.InfoContactoActivity"></activity>
+        <receiver
+            android:name=".reciever.LlamadaReciever"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <activity android:name=".view.InfoContactoActivity" />
         <activity android:name=".view.ImportAmigoActivity" />
         <activity android:name=".view.MainActivity">
             <intent-filter>
